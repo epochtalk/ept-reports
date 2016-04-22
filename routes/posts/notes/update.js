@@ -41,7 +41,7 @@ module.exports = {
       payload: {
         id: Joi.string().required(),
         report_id: Joi.string().required(),
-        note: Joi.string()
+        note: Joi.string().max(255)
       }
     },
     pre: [ { method: 'auth.reports.posts.notes.update(server, auth, payload.id)' } ],

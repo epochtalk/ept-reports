@@ -31,7 +31,7 @@ module.exports = {
     validate: {
       payload: {
         reporter_user_id: Joi.string().required(),
-        reporter_reason: Joi.string().required(),
+        reporter_reason: Joi.string().max(255).required(),
         offender_user_id: Joi.string().required()
       }
     },
