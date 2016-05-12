@@ -160,7 +160,19 @@ var moderator = {
   updateUserReportNote: { allow: true }
 };
 
+var patroller = {
+  createMessageReport: { allow: true },
+  createPostReport: { allow: true },
+  createUserReport: { allow: true }
+};
+
 var user = {
+  createMessageReport: { allow: true },
+  createPostReport: { allow: true },
+  createUserReport: { allow: true }
+};
+
+var newbie = {
   createMessageReport: { allow: true },
   createPostReport: { allow: true },
   createUserReport: { allow: true }
@@ -205,7 +217,9 @@ module.exports = {
     administrator: administrator,
     globalModerator: globalModerator,
     moderator: moderator,
+    patroller: patroller,
     user: user,
+    newbie: newbie,
     banned: {},
     anonymous: {},
     private: {}
