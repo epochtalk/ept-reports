@@ -1,6 +1,6 @@
 {
   "name": "ept-reports",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Default Epochtalk Reports",
   "main": "index.js",
   "scripts": {
