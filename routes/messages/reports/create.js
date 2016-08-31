@@ -1,4 +1,5 @@
 var Joi = require('joi');
+var Boom = require('boom');
 
 /**
   * @apiVersion 0.4.0
@@ -39,7 +40,9 @@ module.exports = {
   },
   handler: function(request, reply) {
     var report = request.payload;
-    var promise = request.db.reports.createMessageReport(report);
+    var promise = request.db.reports.createMessageReport(report)
+    .error(function(err) { return Boom.badRequest(err); });
+
     return reply(promise);
   }
 };
